@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>App Al-Nassr (V4)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya+Telivigala&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body style="background: rgb(241,241,241);padding-bottom: 30px;"><style>
+  .esconder {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Animação suave da opacidade */
+  }
+
+  .mostrar {
+    display: block;
+    opacity: 1;
+  }
+</style><style>
+    .btn-concluida {
+        background-color: grey !important; /* Cinza */
+        color: black !important; /* Letras pretas */
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona todos os botões
+        var botoes = document.querySelectorAll('.realizarmissao');
+
+        botoes.forEach(function(botao) {
+            botao.addEventListener('click', function() {
+                // Define o que acontece após 5 segundos do clique
+                setTimeout(function() {
+                    botao.textContent = 'Missão Concluída'; // Muda o texto do botão
+                    botao.classList.remove('btn-primary'); // Remove a classe de cor inicial
+                    botao.classList.add('btn-concluida'); // Adiciona a classe que define o botão como concluído
+                    botao.disabled = true; // Opcional: desabilita o botão para não ser clicado novamente
+                }, 3500); // 5000 milissegundos = 5 segundos
+            });
+        });
+    });
+</script>
+    <nav class="navbar navbar-expand-md sticky-top py-3 fixarnavbarra" style="background: #000b34;border-bottom: 4px solid rgba(255,255,255,0.4);">
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-style: none;color: rgba(255,255,255,0.65);"><i class="fa fa-navicon" style="font-size: 22px;color: rgb(255,255,255);"></i></button><a class="navbar-brand d-flex align-items-center" href="#"><span class="dinheirotopo" style="font-weight: 800;font-size: 20px;padding: 1px;border-radius: 3px;padding-right: 6px;padding-left: 6px;margin-right: -8px;color: rgb(255,255,255);border: 2px solid rgb(255,255,255);background: rgba(255,255,255,0.14);">R$ 0,00</span></a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ffffff;">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="perfil.html" style="color: #ffffff;">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="saldo.html" style="color: #ffffff;">Saldo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="missoes.html" style="color: #ffffff;">Missões</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><script>
+document.addEventListener("DOMContentLoaded", function() {
+  var navHeight = document.querySelector('nav').offsetHeight;
+  var multiplicador = document.querySelector('.multiplicadorativado');
+  multiplicador.style.top = `${navHeight}px`;
+});
+</script>
+    <h1 style="text-align: center;font-weight: 900;margin-top: 44px;font-size: 32.18px;color: rgb(0,0,0);margin-bottom: 22px;">MISSÕES DO DIA</h1>
+    <div style="padding: 8px;background: #ffffff;margin-right: 8px;margin-left: 8px;margin-top: 18px;box-shadow: 0px 0px 3px;border-radius: 3px;padding-right: 12px;padding-left: 12px;">
+        <div style="margin-top: 8px;">
+            <h2 class="text-uppercase" style="margin-bottom: 7px;font-weight: 700;text-align: left;">🏆 Missão 1</h2>
+            <h6 style="color: rgb(0,142,14);">Pagamento: R$0,70</h6>
+            <p style="color: rgb(122,122,122);"><strong>Curta o vídeo abaixo </strong>em que nosso craque dá um show de&nbsp;bola marcando mais de 4 gols. Cada dia mais Cristiano Ronaldo, vem se comprovando ser o futuro que o Al-Nassr precisava.</p>
+            <div><img class="img-fluid" src="assets/img/missao/missao1.webp"></div>
+            <div style="text-align: center;margin-top: 5px;"><a class="btn btn-primary d-flex justify-content-center align-items-center realizarmissao subir7" role="button" data-bss-disabled-mobile="true" data-bss-hover-animate="pulse" style="border-radius: 3px;background: #0f2884;font-weight: bold;color: rgb(245,245,245);text-align: center;border: 2px solid rgb(0,0,0);" href="https://www.youtube.com/watch?v=qhgnylFSHvg&amp;ab_channel=ESPNBrasil" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up-fill" style="margin-right: 4px;">
+                        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"></path>
+                    </svg>CURTIR VÍDEO</a></div>
+        </div>
+    </div>
+    <div style="padding: 8px;background: #ffffff;margin-right: 8px;margin-left: 8px;margin-top: 18px;box-shadow: 0px 0px 3px;border-radius: 3px;padding-right: 12px;padding-left: 12px;">
+        <div style="margin-top: 8px;">
+            <h2 class="text-uppercase" style="margin-bottom: 7px;font-weight: 700;text-align: left;">🏆 Missão 2</h2>
+            <h6 style="color: rgb(0,142,14);">Pagamento: R$1,20</h6>
+            <p style="color: rgb(122,122,122);"><strong>Leia a matéria completa</strong> sobre a bombástica. "Vamos para o Guinness Book" por Jorge Jesus</p>
+            <div><img class="img-fluid" style="padding-top: 0px;" src="assets/img/neymar.webp"></div>
+            <div style="text-align: center;margin-top: 5px;"><a class="btn btn-primary d-flex justify-content-center align-items-center realizarmissao subir12" role="button" data-bss-disabled-mobile="true" data-bss-hover-animate="pulse" style="border-radius: 3px;background: #0f2884;font-weight: bold;color: rgb(255,255,255);text-align: center;border: 2px solid rgb(0,0,0);" target="_blank" href="https://www.cnnbrasil.com.br/esportes/futebol/futebol-internacional/video-jorge-jesus-fala-com-neymar-sobre-marca-vamos-para-o-guinness-book/"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-list-nested" style="margin-right: 4px;">
+                        <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5"></path>
+                    </svg>LER MATÉRIA</a></div>
+        </div>
+    </div>
+    <div style="padding: 8px;background: #ffffff;margin-right: 8px;margin-left: 8px;margin-top: 18px;box-shadow: 0px 0px 3px;border-radius: 3px;padding-right: 12px;padding-left: 12px;">
+        <div style="margin-top: 8px;">
+            <h2 class="text-uppercase" style="margin-bottom: 7px;font-weight: 700;text-align: left;">🏆 Missão 3</h2>
+            <h6 style="color: rgb(0,142,14);">Pagamento: R$0,50</h6>
+            <p style="color: rgb(122,122,122);"><strong>Curta nossa página no Instagram</strong>. Dessa forma você fortalece a nossa marca e fica ainda mais próximo da gente em apps diferentes.</p>
+            <div><img class="img-fluid" style="padding-top: 0px;" src="assets/img/missao/missao3.webp"></div>
+            <div style="text-align: center;margin-top: 5px;"><a class="btn btn-primary d-flex justify-content-center align-items-center realizarmissao subir5" role="button" data-bss-disabled-mobile="true" data-bss-hover-animate="pulse" style="border-radius: 3px;background: #0f2884;font-weight: bold;color: rgb(255,255,255);text-align: center;border: 2px solid rgb(0,0,0);" target="_blank" href="https://www.instagram.com/alhilal/"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up-fill" style="margin-right: 4px;">
+                        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"></path>
+                    </svg>CURTIR PÁGINA</a></div>
+        </div>
+    </div>
+    <div style="padding: 8px;background: #ffffff;margin-right: 8px;margin-left: 8px;margin-top: 18px;box-shadow: 0px 0px 3px;border-radius: 3px;padding-right: 12px;padding-left: 12px;">
+        <div style="margin-top: 8px;">
+            <h2 class="text-uppercase" style="margin-bottom: 7px;font-weight: 700;text-align: left;">🏆 Missão 4</h2>
+            <h6 style="color: rgb(0,142,14);">Pagamento: R$0,60</h6>
+            <p style="color: rgb(122,122,122);"><strong>Comenta na foto que está no nosso Instagram</strong> uma frase de incentivo ao nosso jogador. Esse é mais um crack que está dando bastante orgulho para o time. Estamos cheios de celebridades e o futuro é nos tornamos o maior do mundo.</p>
+            <div><img class="img-fluid" style="padding-top: 0px;" src="assets/img/missao/missao4.webp"></div>
+            <div style="text-align: center;margin-top: 5px;"><a class="btn btn-primary d-flex justify-content-center align-items-center realizarmissao subir6" role="button" data-bss-disabled-mobile="true" data-bss-hover-animate="pulse" style="border-radius: 3px;background: #0f2884;font-weight: bold;color: rgb(255,255,255);text-align: center;border: 2px solid rgb(0,0,0);" target="_blank" href="https://www.instagram.com/p/C3qnc3WtzoE/?img_index=1"><i class="fa fa-comment" style="margin-right: 4px;"></i>COMENTAR NA FOTO</a></div>
+        </div>
+    </div>
+    <div style="text-align: center;"><button class="btn abrirmaismissao" style="border-radius: 24px;background: #0f2884;font-weight: bold;color: rgb(255,255,255);text-align: center;border: 2px solid rgb(0,0,0);margin-top: 18px;padding-right: 15px;padding-left: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-down-fill" style="margin-right: 3px;">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"></path>
+            </svg>Ver mais missões</button></div>
+    <div class="abrirmaisnoticia esconder">
+        <div style="padding: 8px;background: #ffffff;margin-right: 8px;margin-left: 8px;margin-top: 18px;box-shadow: 0px 0px 3px;border-radius: 3px;padding-right: 12px;padding-left: 12px;">
+            <div style="margin-top: 8px;">
+                <h2 class="text-uppercase" style="margin-bottom: 7px;font-weight: 700;text-align: left;">🏆 Missão 5</h2>
+                <h6 style="color: rgb(0,142,14);">Pagamento: R$1,90</h6>
+                <p style="color: rgb(122,122,122);"><strong>Assista até o final o vídeo</strong> que filma o incrível gol que o nosso craque marcou no último jogo. É uma maravilha prestigiar os nossos jogadores que vem apresentando um ótimo desempenho.</p>
+                <div><img class="img-fluid" style="padding-top: 0px;" src="assets/img/missao/missao5.webp"></div>
+                <div style="text-align: center;margin-top: 5px;"><a class="btn btn-primary d-flex justify-content-center align-items-center realizarmissao subir19" role="button" data-bss-disabled-mobile="true" data-bss-hover-animate="pulse" style="border-radius: 3px;background: #0f2884;font-weight: bold;color: rgb(255,255,255);text-align: center;border: 2px solid rgb(0,0,0);" target="_blank" href="https://www.youtube.com/watch?v=Ny1FkM-F3eA&amp;ab_channel=CanalGOAT"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-play-btn-fill" style="margin-right: 4px;">
+                            <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                        </svg>ASSISTIR VÍDEO COMPLETO</a></div>
+            </div>
+        </div>
+        <div style="padding: 8px;background: #ffffff;margin-right: 8px;margin-left: 8px;margin-top: 18px;box-shadow: 0px 0px 3px;border-radius: 3px;padding-right: 12px;padding-left: 12px;">
+            <div style="margin-top: 8px;">
+                <h2 class="text-uppercase" style="margin-bottom: 7px;font-weight: 700;text-align: left;">🏆 Missão 6</h2>
+                <h6 style="color: rgb(0,142,14);">Pagamento: R$0,80</h6>
+                <p style="color: rgb(122,122,122);"><strong>Curta o vídeo abaixo</strong> com os melhores momentos do nosso time jogando contra o Inter Miami. Foi um jogo muito bonito. Vale a pena conferir o desempenho do nosso time!</p>
+                <div><img class="img-fluid" style="padding-top: 0px;" src="assets/img/missao/missao6.webp"></div>
+                <div style="text-align: center;margin-top: 5px;"><a class="btn btn-primary d-flex justify-content-center align-items-center realizarmissao subir8" role="button" data-bss-disabled-mobile="true" data-bss-hover-animate="pulse" style="border-radius: 3px;background: #0f2884;font-weight: bold;color: rgb(255,255,255);text-align: center;border: 2px solid rgb(0,0,0);" target="_blank" href="https://www.youtube.com/watch?v=hmE4rZUa3P8&amp;ab_channel=ESPNBrasil"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up-fill" style="margin-right: 4px;">
+                            <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"></path>
+                        </svg>CURTIR VÍDEO</a></div>
+            </div>
+        </div>
+    </div><script>
+    // Inicializa o valor atual e uma flag para controle de clique
+    let valorAtual = 0;
+    let valorParaAdicionarAoRetornar = 0; // Mantém o valor a ser adicionado ao retornar
+
+    // Função para animar o valor do elemento de forma suave
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = 'R$ ' + (start + progress * (end - start)).toFixed(2).replace('.', ',');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                valorAtual = end; // Atualiza o valor atual após a conclusão da animação
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Função para configurar a animação baseada no botão pressionado
+    function setupAnimation() {
+        const obj = document.querySelector('.dinheirotopo'); // Seleciona o elemento a ser animado
+
+        document.querySelectorAll('[class^="subir"], [class*=" subir"]').forEach(button => {
+            button.addEventListener('click', () => {
+                // Extrai o valor numérico do classname do botão
+                const valorAdicionar = parseInt(button.className.match(/subir(\d+)/)[1], 10);
+                valorParaAdicionarAoRetornar += valorAdicionar; // Acumula o valor a ser adicionado
+            });
+        });
+    }
+
+    // Configura a animação para ser executada quando o usuário retorna ao site
+    function handleVisibilityChange() {
+        if (!document.hidden && valorParaAdicionarAoRetornar > 0) {
+            const obj = document.querySelector('.dinheirotopo');
+            let novoValor = valorAtual + valorParaAdicionarAoRetornar;
+            animateValue(obj, valorAtual, novoValor, 2000); // Executa a animação com o valor acumulado
+            valorParaAdicionarAoRetornar = 0; // Reseta o valor a ser adicionado após a animação
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setupAnimation();
+        // Adiciona um ouvinte de evento para mudanças de visibilidade da página
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+    });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o botão e o div
+    var botao = document.querySelector('.abrirmaismissao');
+    var divNoticia = document.querySelector('.abrirmaisnoticia');
+
+    // Adiciona um ouvinte de evento de clique ao botão
+    botao.addEventListener('click', function() {
+      // Revela o conteúdo
+      divNoticia.classList.remove('esconder');
+      divNoticia.classList.add('mostrar');
+
+      // Esconde o botão suavemente
+      botao.classList.add('botao-esconder');
+
+      // Opcional: remove o botão do DOM após a transição
+      setTimeout(() => {
+        botao.style.display = 'none';
+      }, 500); // Espera a transição de 0.5s terminar
+    });
+  });
+</script>
+    <div class="text-center" style="background: #ff0000;color: rgb(237,237,237);padding-top: 5px;padding-bottom: 5px;position: fixed;width: 100%;z-index: 999;top: 80px;">
+        <h6 style="margin-bottom: 0px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-capslock-fill tada animated infinite" style="margin-right: 4px;">
+                <path d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM4.5 13.5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"></path>
+            </svg>MULTIPLICADOR ATIVADO<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-capslock-fill tada animated infinite" style="margin-right: 0px;margin-left: 4px;">
+                <path d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM4.5 13.5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"></path>
+            </svg></h6>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
