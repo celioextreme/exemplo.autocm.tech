@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Perguntados IA (ModalMelhor)</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.min.css">
+</head>
+
+<body style="background: url(&quot;../assets/img/fundo/9.webp&quot;), rgb(0,0,0);"><script>
+    // Função para animar o valor do elemento
+    function animateValue(obj, start, end, duration, callback) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            // Mantém o formato decimal com ponto
+            obj.innerHTML = 'R$ ' + (start + progress * (end - start)).toFixed(2);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                if(callback) callback(end); // Chama a função de callback passando o valor final
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Função para atualizar a URL com o valor final da animação
+    function atualizarURLComValorFinal(valorFinal) {
+        // Mantém o formato decimal com ponto para a URL
+        var valorFormatado = valorFinal.toFixed(2);
+        var urlAtual = new URL(window.location.href);
+        urlAtual.searchParams.set('dinheiro', valorFormatado);
+        window.history.pushState({path:urlAtual.href}, '', urlAtual.href);
+    }
+
+    // Espera o evento DOMContentLoaded para iniciar a animação
+    document.addEventListener('DOMContentLoaded', () => {
+        const obj = document.querySelector('.dinheirotopo');
+        // Inicia a animação e define o que fazer quando terminar
+        animateValue(obj, 14.50, 33.20, 2000, atualizarURLComValorFinal);
+    });
+</script>
+    <nav class="navbar navbar-expand-md sticky-top" style="color: #ffffff;background: rgba(0,0,0,0.95);padding-bottom: 16px;padding-top: 16px;border-bottom: 2px solid rgba(0,209,255,0.65);">
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-style: none;color: rgba(255,255,255,0.65);"><i class="fa fa-navicon" style="color: #00D1FF;"></i></button><a class="navbar-brand dinheirotopo" href="#" style="border-radius: 5px;border-width: 1px;border-style: solid;font-family: Orbitron, sans-serif;color: #00D1FF;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;margin-right: 12px;font-weight: bold;font-size: 18px;">R$&nbsp; 0,00</a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html" style="color: #00D1FF;">Inicio</a></li>
+                    <li class="nav-item" style="color: #00D1FF;"><a class="nav-link" href="../perfil.html" style="color: #00D1FF;">Perfil</a></li>
+                    <li class="nav-item" style="color: #00D1FF;"><a class="nav-link" href="../saldo.html" style="color: #00D1FF;">Saldo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="essa-headline" style="text-align: center;margin-left: 12px;margin-right: 12px;margin-top: 46px;">
+        <h5 class="escrevendo" style="color: #00D1FF;font-family: Orbitron, sans-serif;"></h5>
+        <p class="flash animated paragrafofadein" style="color: #E0E0E0;font-family: Montserrat, sans-serif;font-size: 14px;">Conhecido por seu conteúdo de entretenimento leve e descontraído, "Cidade Alerta" é um dos programas mais amados da RecordTV.</p><script>
+  // Texto que você deseja que apareça como sendo digitado
+  const textoParaEscrever = '"Cidade Alerta" é um programa de entretenimento leve da RecordTV.';
+  const elemento = document.querySelector('.escrevendo');
+  let indiceLetra = 0;
+
+  function digitarLetra() {
+    // Verifica se ainda há letras para adicionar
+    if (indiceLetra < textoParaEscrever.length) {
+      // Adiciona a próxima letra ao elemento
+      elemento.textContent += textoParaEscrever.charAt(indiceLetra);
+      indiceLetra++;
+      // Chama a função novamente após um breve intervalo
+      setTimeout(digitarLetra, 35); // Ajuste a velocidade de digitação aqui
+    }
+  }
+
+  // Inicia a função de digitação quando o documento estiver pronto
+  document.addEventListener('DOMContentLoaded', digitarLetra);
+</script>
+<style>
+  .paragrafofadein {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Ajuste a duração conforme necessário para o fade-in desejado */
+  }
+
+  /* Adiciona uma classe que será usada para iniciar o fade-in */
+  .fadein-active {
+    display: block;
+    opacity: 1;
+  }
+</style>
+
+<script>
+  // Supondo que você saiba a duração da animação .escrevendo
+  const duracaoAnimacaoEscrevendo = 2000; // 5000 milissegundos = 5 segundos
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const paragrafo = document.querySelector('.paragrafofadein');
+      paragrafo.classList.add('fadein-active');
+    }, duracaoAnimacaoEscrevendo);
+  });
+</script>
+    </div>
+    <div id="esse-countdown"><div id="countdownContainer">
+  <div id="countdown" class="countdown-style">60</div>
+</div>
+
+
+<script>
+  let countdownNumber = 60;
+  const countdownElement = document.getElementById('countdown');
+
+  const countdownInterval = setInterval(() => {
+    countdownNumber--;
+    countdownElement.innerText = countdownNumber;
+
+    if (countdownNumber <= 0) {
+      clearInterval(countdownInterval);
+      // Opcional: Remover animação da borda quando o countdown chegar a 0
+      const countdownStyle = countdownElement.style;
+      countdownStyle.setProperty("--border-animation", "none");
+    }
+  }, 1000);
+</script></div>
+    <div class="d-flex justify-content-center">
+        <div id="esse-botoes">
+            <div style="text-align: center;"><a class="btn btn-primary botaoProximaPergunta" role="button" style="background: rgba(0,209,255,0.49);border-style: none;border-bottom-style: none;box-shadow: 0px 0px 7px 2px #00D1FF;border-radius: 0px;font-weight: bold;font-family: Montserrat, sans-serif;padding-left: 80px;padding-bottom: 8px;padding-right: 80px;padding-top: 8px;max-width: 270px;min-width: 270px;" href="#">VERDADEIRO</a></div>
+            <div style="text-align: center;margin-top: 16px;"><a class="btn btn-primary botaoMostrarModal" role="button" style="background: rgba(255,15,0,0.35);border-style: none;border-bottom-style: none;box-shadow: 0px 0px 7px 2px #ff2e00;border-radius: 0px;padding-right: 80px;padding-left: 80px;font-weight: bold;padding-top: 8px;padding-bottom: 8px;min-width: 270px;font-family: Montserrat, sans-serif;max-width: 270px;" href="#" data-bs-toggle="modal" data-bs-target="#modalJustificativa">FALSO</a></div>
+        </div>
+    </div>
+    <footer style="margin-top: 20px;"></footer><script>
+  // Seleciona todos os botões com a classe 'botaoProximaPergunta'
+  document.querySelectorAll('.botaoProximaPergunta').forEach(botao => {
+    botao.addEventListener('click', function() {
+      // Pega a URL atual
+      const urlAtual = window.location.href;
+      
+      // Extrai o número da pergunta da URL
+      const numeroPergunta = urlAtual.match(/pergunta-(\d+)/)[1];
+      
+      // Converte o número para inteiro e incrementa
+      const proximoNumero = parseInt(numeroPergunta, 10) + 1;
+      
+      // Monta a nova URL
+      const novaUrl = `pergunta-${proximoNumero}.html`;
+      
+      // Redireciona para a nova URL
+      window.location.href = novaUrl;
+    });
+  });
+</script><script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Função para adicionar o parâmetro 'dinheiro' a uma URL, se não estiver presente
+    function adicionarParametroDinheiro(url) {
+        const urlObj = new URL(url, window.location.origin);
+        const parametrosAtuais = new URLSearchParams(window.location.search);
+        const dinheiro = parametrosAtuais.get('dinheiro');
+
+        // Verifica se o parâmetro 'dinheiro' existe e adiciona à URL, se necessário
+        if (dinheiro && !urlObj.searchParams.has('dinheiro')) {
+            urlObj.searchParams.set('dinheiro', dinheiro);
+        }
+
+        return urlObj.toString();
+    }
+
+    // Lista de páginas que devem manter o parâmetro 'dinheiro'
+    const paginas = ['index.html', 'saldo.html', 'perfil.html'];
+
+    // Intercepta cliques em todos os links
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const destino = this.getAttribute('href');
+            const correspondePagina = paginas.some(pagina => destino.includes(pagina));
+
+            // Se o destino é uma das páginas especificadas, adiciona o parâmetro 'dinheiro'
+            if (correspondePagina) {
+                e.preventDefault(); // Previne o comportamento padrão do link
+
+                const novoHref = adicionarParametroDinheiro(destino);
+                window.location.href = novoHref; // Redireciona para a nova URL
+            }
+        });
+    });
+});
+</script>
+    <div class="modal fade modal" role="dialog" tabindex="-1" id="modalJustificativa" style="background: rgba(120,120,120,0.82);">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center" style="background: #222831;text-align: center;border-style: none;padding-bottom: 0px;border-top-left-radius: 4px;border-top-right-radius: 4px;">
+                    <h4 class="modal-title" style="color: rgb(255,255,255);font-family: Montserrat, sans-serif;">Justifique Sua Resposta</h4>
+                </div>
+                <div class="modal-body" style="background: #222831;text-align: center;border-style: none;"><textarea placeholder="Digite sua justificativa aqui" style="width: 100%;color: rgb(0,0,0);height: 50px;font-size: 14px;border-radius: 4px;padding-left: 8px;padding-right: 8px;font-family: Montserrat, sans-serif;background: rgba(255,255,255,0.85);" minlength="5"></textarea></div>
+                <div class="modal-footer d-flex justify-content-center" style="background: #222831;border-style: none;padding-top: 0px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;"><a class="btn btn-primary botaoProximaPergunta" role="button" style="border-radius: 3px;font-weight: bold;color: #efefef;border-style: solid;border-color: #ffffff;font-size: 14px;background: #1f3556;font-family: Montserrat, sans-serif;" href="#">ENVIAR RESPOSTA</a><script>
+  // Seleciona todos os botões com a classe 'botaoProximaPergunta'
+  document.querySelectorAll('.botaoProximaPergunta').forEach(botao => {
+    botao.addEventListener('click', function() {
+      // Pega a URL atual
+      const urlAtual = window.location.href;
+      
+      // Extrai o número da pergunta da URL
+      const numeroPergunta = urlAtual.match(/pergunta-(\d+)/)[1];
+      
+      // Converte o número para inteiro e incrementa
+      const proximoNumero = parseInt(numeroPergunta, 10) + 1;
+      
+      // Monta a nova URL
+      const novaUrl = `pergunta-${proximoNumero}.html`;
+      
+      // Redireciona para a nova URL
+      window.location.href = novaUrl;
+    });
+  });
+</script></div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Perguntados IA (ModalMelhor)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.min.css">
+</head>
+
+<body style="background: rgb(0,0,0);padding-bottom: 31px;">
+    <nav class="navbar navbar-expand-md sticky-top" style="color: #ffffff;background: rgba(0,0,0,0.89);padding-bottom: 16px;padding-top: 16px;border-bottom: 2px solid rgba(0,209,255,0.65);">
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-style: none;color: rgba(255,255,255,0.65);"><i class="fa fa-navicon" style="color: #00D1FF;"></i></button><a class="navbar-brand" id="limite01" href="#" style="border-radius: 5px;border-width: 1px;border-style: solid;font-family: Orbitron, sans-serif;color: #00D1FF;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;margin-right: 12px;font-weight: bold;font-size: 18px;">LIMITE 02</a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #00D1FF;">Inicio</a></li>
+                    <li class="nav-item" style="color: #00D1FF;"><a class="nav-link" href="perfil.html" style="color: #00D1FF;">Perfil</a></li>
+                    <li class="nav-item" style="color: #00D1FF;"><a class="nav-link" href="saldo.html" style="color: #00D1FF;">Saldo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="text-align: center;color: rgb(43,100,156);margin-right: 20px;margin-left: 20px;margin-top: 28px;">
+        <div style="border-style: solid;color: #00D1FF;border-radius: 3px;margin-top: 10px;padding-top: 10px;padding-bottom: 20px;background: linear-gradient(178deg, black 72%, rgba(0,134,163,0.14) 88%, rgba(0,209,255,0.33) 100%);">
+            <p style="font-family: Montserrat, sans-serif;margin-bottom: 0px;">Saldo Total</p>
+            <div class="flash animated infinite" id="sumirdepois" style="margin-top: 6px; sumirdepois">
+                <h6 style="color: #00D1FF;font-family: Orbitron, sans-serif;">+ R$&nbsp;<span class="dinheiroparametro">&nbsp;</span></h6><script>
+  // Aguarda o carregamento completo da página
+  window.onload = function() {
+    // Define um temporizador para executar após 2 segundos
+    setTimeout(function() {
+      // Seleciona o elemento pelo ID 'sumirdepois'
+      var elemento = document.getElementById('sumirdepois');
+      
+      // Aplica 'display: none' ao elemento, fazendo-o desaparecer
+      if (elemento) {
+        elemento.style.display = 'none';
+      }
+    }, 2800); // Temporizador definido para 2000 milissegundos (2 segundos)
+  };
+</script>
+            </div>
+            <h1 id="saldo-aumentar" class="dinheirotopo" style="color: #00D1FF;font-family: Orbitron, sans-serif;margin-bottom: 0px;">R$ 588,90</h1>
+            <div style="margin-top: 11px;"><button class="btn btn-primary botao-solicitar-saque" type="button" style="background: radial-gradient(#000000 85%, #00D1FF 99%), #00D1FF;padding-right: 14px;padding-left: 14px;padding-bottom: 6px;padding-top: 6px;font-weight: bold;font-family: Montserrat, sans-serif;text-shadow: 1px 1px 3px rgb(0,0,0);border-radius: 3px;border: 1px solid #00D1FF;font-size: 15px;">SOLICITAR SAQUE</button></div>
+        </div><script>
+    // Função para animar o valor do elemento
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = 'R$ ' + (start + progress * (end - start)).toFixed(2).replace('.', ',');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Espera o evento DOMContentLoaded para iniciar a animação
+    document.addEventListener('DOMContentLoaded', () => {
+        const obj = document.querySelector('.dinheirotopo');
+        animateValue(obj, 500, 588.90, 3000); // Anima de R$ 0,00 para R$ 6,10 em 2000ms (2 segundos)
+    });
+</script>
+    </div>
+    <div style="text-align: center;color: rgb(43,100,156);margin-right: 20px;margin-left: 20px;margin-top: 14px;">
+        <div style="border-style: solid;color: #39FF14;border-radius: 3px;margin-top: 10px;padding-top: 10px;padding-bottom: 20px;">
+            <p style="font-family: Montserrat, sans-serif;margin-bottom: 0px;">Em Liberação</p>
+            <h1 style="color: #39FF14;font-family: Orbitron, sans-serif;margin-bottom: 0px;">R$ 123,10</h1>
+        </div>
+    </div>
+    <div style="margin-right: 20px;margin-left: 20px;margin-top: 40px;padding-top: 15px;padding-bottom: 15px;border-style: solid;border-color: rgba(0,209,255,0.19);">
+        <h4 style="text-align: center;color: #00D1FF;font-family: Orbitron, sans-serif;">ÚLTIMOS SAQUES</h4>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 122,90</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Hoje</span></div>
+        </div>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 90,00</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Hoje</span></div>
+        </div>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 280,10</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Ontem</span></div>
+        </div>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 380,50</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Ontem</span></div>
+        </div>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 195,15</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Ontem</span></div>
+        </div>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 510,70</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Há 3 dias</span></div>
+        </div>
+        <div>
+            <div style="color: #00D1FF;display: flex;justify-content: space-between;margin-right: 20px;margin-left: 20px;align-items: center;margin-top: 25px;">
+                <p>Nu Financeira S.A&nbsp;</p>
+                <p class="direita" style="color: #39FF14;">- R$ 621,54</p>
+            </div>
+            <div style="text-align: right;margin-right: 20px;margin-left: 20px;margin-top: -12px;"><span style="color: rgba(57,255,20,0.55);">Há 4 dias</span></div>
+        </div>
+        <div style="text-align: center;margin-top: 24px;margin-right: 40px;margin-left: 40px;">
+            <p style="color: rgb(0,209,255);border-style: solid;padding-top: 4px;padding-bottom: 4px;font-weight: bold;">VER MAIS</p>
+        </div>
+    </div>
+    <div id="aparecernoticacao">
+        <div id="nubanknotificacao" class="notification-wrapper">
+            <div class="notification"><img src="assets/img/nubank.webp" class="notification-image">
+                <div class="notification-text"><span class="notification-title">Transferência recebida</span><span class="notification-description transferencia">Você recebeu uma transferência de R$770,20 de App Al-Hilal LTDA</span><script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona o elemento pelo ID 'saldo-aumentar'
+  var saldoAumentar = document.getElementById('saldo-aumentar');
+
+  // Seleciona o span onde o valor deve ser replicado
+  var spanTransferencia = document.querySelector('span.transferencia'); // Supondo que você adicione a classe 'transferencia' ao seu span
+
+  // Função para atualizar o span com o valor de 'saldo-aumentar'
+  function atualizarSpanTransferencia() {
+    // Pega o valor atual de 'saldo-aumentar'
+    var valorSaldoAumentar = saldoAumentar.textContent;
+
+    // Atualiza o span com o novo valor
+    spanTransferencia.textContent = 'Você recebeu uma transferência de ' + valorSaldoAumentar + ' de CashGPT LTDA';
+  }
+
+  // Chama a função para atualizar o span assim que a página carrega
+  atualizarSpanTransferencia();
+
+  // Supondo que você queira atualizar o span toda vez que o saldo aumentar, você pode chamar 'atualizarSpanTransferencia'
+  // após a atualização do saldo ou em qualquer outro ponto em que o saldo seja modificado.
+});
+</script></div>
+            </div>
+        </div><script>
+  botaoSacar.addEventListener("click", function() {
+    setTimeout(function(){
+      notificationWrapper.style.display = "block";
+    }, 4000); 
+  });
+    
+</script>
+        <div class="modal-saque">
+            <div class="modal-conteudo" style="border-radius: 3px;background: #000000;border: 2px solid #00D1FF;box-shadow: 0px 0px 4px rgba(0,209,255,0.35);">
+                <h2 class="h1solicitarsaque" style="color: #00D1FF;">SOLICITAR SAQUE</h2>
+                <form class="formdopix"><label class="form-label form-label" for="chave-pix" style="color: rgb(204,204,204);">Digite sua chave PIX:</label>
+                    <div><input type="text" id="chave-pix" name="chave-pix" style="color: #000000;padding-top: 6px;padding-bottom: 6px;border-radius: 3px;" placeholder="Digite sua chave pix"></div><button type="button" style="font-size: 18px;border-radius: 6px;background: #00D1FF;border-style: none;font-weight: bold;padding-top: 3px;padding-bottom: 3px;padding-right: 36px;padding-left: 36px;margin-top: 4px;color: rgb(255,255,255);" id="botao-sacar">SACAR</button>
+                    <p style="font-size: 13px;margin-top: 14px;font-style: italic;color: rgb(213,213,213);">Você só pode sacar o valor total</p>
+                </form><span class="close-button" style="border-radius:152px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewbox="0 0 24 24" fill="none" style="color:#007474;"><path d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z" fill="currentColor"></path><path fill-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" fill="currentColor"></path></svg></span>
+            </div><script>
+    // Função para fechar o modal
+function closeModal() {
+  document.querySelector('.modal-saque').style.display = 'none';
+}
+
+// Adiciona ouvinte de eventos ao botão de fechar
+document.querySelector('.close-button').addEventListener('click', closeModal);
+
+// Adiciona ouvinte de eventos ao fundo do modal (fora do form)
+document.addEventListener('click', function(event) {
+  var modal = document.querySelector('.modal-saque');
+
+  // Fecha o modal se clicar fora do form
+  if (!form.contains(event.target)) {
+    closeModal();
+  }
+});
+
+// Impede que eventos de clique no form fechem o modal
+document.querySelector('.formdopix').addEventListener('click', function(event) {
+  event.stopPropagation();
+});
+</script>
+        </div><script>
+const botaoSolicitarSaque = document.querySelector(".botao-solicitar-saque");
+const modalSaque = document.querySelector(".modal-saque");
+const botaoSacar = document.getElementById("botao-sacar");
+const notificationWrapper = document.querySelector(".notification-wrapper");
+
+botaoSolicitarSaque.addEventListener("click", (event) => {
+  event.preventDefault(); // evita redirecionar a página
+  modalSaque.style.display = "flex";
+});
+
+botaoSacar.addEventListener("click", (event) => {
+  event.preventDefault(); // evita redirecionar a página
+  const chavePix = document.getElementById("chave-pix").value;
+  console.log(`Solicitando saque com a chave PIX ${chavePix}`);
+  // aqui você pode fazer alguma ação, como enviar os dados para o servidor
+  modalSaque.style.display = "none";
+  
+  // Mostra a notificação após 4 segundos
+  setTimeout(function(){
+    notificationWrapper.style.display = "block";
+    
+    // Esconde a notificação após 8 segundos
+    setTimeout(function(){
+      notificationWrapper.style.display = "none";
+    }, 6000);
+  }, 4000);
+});
+    
+function mudarValor() {
+  setTimeout(function() {
+    document.getElementById("saldo-texto").innerHTML = "R$ 0,00";
+  }, 4000);
+}
+</script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona o botão pelo ID
+  var botaoSacar = document.getElementById('botao-sacar');
+
+  // Adiciona um ouvinte de eventos para o clique do botão
+  botaoSacar.addEventListener('click', function() {
+    // Aguarda 3 segundos (3000 milissegundos) antes de executar a função
+    setTimeout(function() {
+      // Seleciona o parágrafo pelo ID
+      var saldoAumentarParagrafo = document.getElementById('saldo-aumentar');
+      // Atualiza o texto do parágrafo
+      saldoAumentarParagrafo.textContent = 'R$ 0,00';
+    }, 3000); // 3 segundos de atraso
+  });
+});
+</script>
+    </div><script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Função para adicionar o parâmetro 'dinheiro' a uma URL, se não estiver presente
+    function adicionarParametroDinheiro(url) {
+        const urlObj = new URL(url, window.location.origin);
+        const parametrosAtuais = new URLSearchParams(window.location.search);
+        const dinheiro = parametrosAtuais.get('dinheiro');
+
+        // Verifica se o parâmetro 'dinheiro' existe e adiciona à URL, se necessário
+        if (dinheiro && !urlObj.searchParams.has('dinheiro')) {
+            urlObj.searchParams.set('dinheiro', dinheiro);
+        }
+
+        return urlObj.toString();
+    }
+
+    // Lista de páginas que devem manter o parâmetro 'dinheiro'
+    const paginas = ['index.html', 'saldo.html', 'perfil.html'];
+
+    // Intercepta cliques em todos os links
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const destino = this.getAttribute('href');
+            const correspondePagina = paginas.some(pagina => destino.includes(pagina));
+
+            // Se o destino é uma das páginas especificadas, adiciona o parâmetro 'dinheiro'
+            if (correspondePagina) {
+                e.preventDefault(); // Previne o comportamento padrão do link
+
+                const novoHref = adicionarParametroDinheiro(destino);
+                window.location.href = novoHref; // Redireciona para a nova URL
+            }
+        });
+    });
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Função para obter o valor do parâmetro 'dinheiro' da URL
+    function obterValorParametroDinheiro() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('dinheiro'); // Retorna o valor do parâmetro 'dinheiro' ou null se não existir
+    }
+
+    // Função para definir o valor do dinheiro no elemento com a classe 'dinheiroparametro'
+    function definirValorDinheiroElemento(valor) {
+        // Encontra todos os elementos com a classe 'dinheiroparametro'
+        const elementos = document.querySelectorAll('.dinheiroparametro');
+
+        // Define o valor do dinheiro como o conteúdo de texto desses elementos
+        elementos.forEach(function(elemento) {
+            elemento.textContent = valor || '15.00'; // Se valor for null ou undefined, define um texto padrão
+        });
+    }
+
+    // Obtem o valor do parâmetro 'dinheiro' da URL
+    const valorDinheiro = obterValorParametroDinheiro();
+
+    // Define o valor nos elementos apropriados
+    definirValorDinheiroElemento(valorDinheiro);
+});
+</script><style>
+    /* style.css */
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+#aparecernoticacao {
+    cursor: pointer;
+    /* Adicione mais estilos aqui conforme necessário */
+}
+</style>
+
+<script>
+    // script.js
+document.getElementById('nubanknotificacao').addEventListener('click', function() {
+    // Adiciona a animação ao body ou a um container se preferir
+    document.body.style.animation = "slideOut 0.5s ease-out forwards";
+
+    // Espera a animação terminar para redirecionar
+    setTimeout(function() {
+        window.location.href = "nubank.html";
+    }, 500); // Ajuste este tempo de acordo com a duração da sua animação
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona o botão pelo ID
+  var botaoSacar = document.getElementById('botao-sacar');
+
+  // Adiciona um ouvinte de eventos para o clique do botão
+  botaoSacar.addEventListener('click', function() {
+    // Aguarda 3 segundos (3000 milissegundos) antes de executar a função
+    setTimeout(function() {
+      // Seleciona o parágrafo pelo ID
+      var saldoAumentarParagrafo = document.getElementById('limite01');
+      // Atualiza o texto do parágrafo
+      saldoAumentarParagrafo.textContent = 'LIMITE 01';
+    }, 3000); // 3 segundos de atraso
+  });
+});
+</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" style="background: #000000;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Perguntados IA (ModalMelhor)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="background: rgb(0,0,0);">
+    <nav class="navbar navbar-expand-md sticky-top" style="color: #ffffff;background: rgba(0,0,0,0.89);padding-bottom: 16px;padding-top: 16px;border-bottom: 2px solid rgba(0,209,255,0.65);">
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-style: none;color: rgba(255,255,255,0.65);"><i class="fa fa-navicon" style="color: #00D1FF;"></i></button><a class="navbar-brand" href="#" style="border-radius: 5px;border-width: 1px;border-style: solid;font-family: Orbitron, sans-serif;color: #00D1FF;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;margin-right: 12px;font-weight: bold;font-size: 18px;">R$&nbsp; 0,00</a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #00D1FF;">Inicio</a></li>
+                    <li class="nav-item" style="color: #00D1FF;"><a class="nav-link" href="perfil.html" style="color: #00D1FF;">Perfil</a></li>
+                    <li class="nav-item" style="color: #00D1FF;"><a class="nav-link" href="saldo.html" style="color: #00D1FF;">Saldo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="text-align: center;color: #00D1FF;margin-top: 25px;"><i class="far fa-user-circle" style="font-size: 60px;border-width: 2px;border-style: solid;border-radius: 82px;padding: 20px;"></i>
+        <h4 style="font-family: Orbitron, sans-serif;margin-top: 8px;">JOAO DA SILVA</h4>
+    </div>
+    <div>
+        <div style="margin: 24px;padding: 0px;padding-top: 8px;padding-bottom: 8px;border-radius: 3px;border: 3px solid rgba(0,209,255,0.77) ;"><span style="margin-left: 12px;margin-right: 12px;color: #E0E0E0;font-family: Montserrat, sans-serif;">Nome Completo:</span>
+            <div style="color: rgb(213,213,213);margin-right: 12px;margin-left: 12px;background: rgba(0,209,255,0.64);padding-top: 4px;padding-bottom: 4px;border-radius: 2px;">
+                <p style="color: #E0E0E0;font-family: Montserrat, sans-serif;margin-left: 8px;margin-bottom: 0px;">João da Silva Pereira Assis</p>
+            </div>
+        </div>
+        <div style="margin: 24px;padding: 0px;padding-top: 8px;padding-bottom: 8px;border-radius: 3px;border: 3px solid rgba(0,209,255,0.77) ;"><span style="margin-left: 12px;margin-right: 12px;color: #E0E0E0;font-family: Montserrat, sans-serif;">Email:</span>
+            <div style="color: rgb(213,213,213);margin-right: 12px;margin-left: 12px;background: rgba(0,209,255,0.64);padding-top: 4px;padding-bottom: 4px;border-radius: 2px;">
+                <p style="color: #E0E0E0;font-family: Montserrat, sans-serif;margin-left: 8px;margin-bottom: 0px;">joaodasil*********45@gmail.com</p>
+            </div>
+        </div>
+        <div style="margin: 24px;padding: 0px;padding-top: 8px;padding-bottom: 8px;border-radius: 3px;border: 3px solid rgba(0,209,255,0.77) ;"><span style="margin-left: 12px;margin-right: 12px;color: #E0E0E0;font-family: Montserrat, sans-serif;">Gênero:</span>
+            <div style="color: rgb(213,213,213);margin-right: 12px;margin-left: 12px;background: rgba(0,209,255,0.64);padding-top: 4px;padding-bottom: 4px;border-radius: 2px;">
+                <p style="color: #E0E0E0;font-family: Montserrat, sans-serif;margin-left: 8px;margin-bottom: 0px;">Homem</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div><button class="btn btn-primary" type="button" style="background: rgba(0,209,255,0.06);border: 2px solid #00D1FF;border-radius: 3px;padding-right: 24px;padding-left: 24px;width: 188px;">ALTERAR SENHA</button></div>
+        <div style="margin-top: 8px;"><button class="btn btn-primary" type="button" style="background: rgba(0,209,255,0.06);border: 2px solid #00D1FF;border-radius: 3px;padding-right: 24px;padding-left: 24px;width: 188px;">ALTERAR EMAIL</button></div>
+    </div><script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Função para adicionar o parâmetro 'dinheiro' a uma URL, se não estiver presente
+    function adicionarParametroDinheiro(url) {
+        const urlObj = new URL(url, window.location.origin);
+        const parametrosAtuais = new URLSearchParams(window.location.search);
+        const dinheiro = parametrosAtuais.get('dinheiro');
+
+        // Verifica se o parâmetro 'dinheiro' existe e adiciona à URL, se necessário
+        if (dinheiro && !urlObj.searchParams.has('dinheiro')) {
+            urlObj.searchParams.set('dinheiro', dinheiro);
+        }
+
+        return urlObj.toString();
+    }
+
+    // Lista de páginas que devem manter o parâmetro 'dinheiro'
+    const paginas = ['index.html', 'saldo.html', 'perfil.html'];
+
+    // Intercepta cliques em todos os links
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const destino = this.getAttribute('href');
+            const correspondePagina = paginas.some(pagina => destino.includes(pagina));
+
+            // Se o destino é uma das páginas especificadas, adiciona o parâmetro 'dinheiro'
+            if (correspondePagina) {
+                e.preventDefault(); // Previne o comportamento padrão do link
+
+                const novoHref = adicionarParametroDinheiro(destino);
+                window.location.href = novoHref; // Redireciona para a nova URL
+            }
+        });
+    });
+});
+</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
